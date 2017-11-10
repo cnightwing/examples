@@ -10,6 +10,8 @@ dnds.py : calculates the dN and dS scores for orthologous gene groups without as
 
 report-alignment.py : parses a pairwise alignment produced by nucmer (part of MUMmer) and produces a contigs-on-contigs plot of the sub-alignments complete with gene and snp labelling, primarily to visualise alignments and look for recombination events.
 
+platescan_v3.py : takes a scanned image of three agar plates, dissects the image, locates the 384-colony array, determines the size and intensity of the colony by cross-correlation and outputs results for later processing
+
 R
 
 synteny-ld.r : takes the gene annotations for multiple strains and calculates synteny across all of them based on orthologous gene groups, then estimates how this decays with distance, ie: as you look at further apart pairs of genes, is synteny maintained?
@@ -17,3 +19,5 @@ synteny-ld.r : takes the gene annotations for multiple strains and calculates sy
 plot-alignment.r : similar to report-alignment.py, but produces an abstract view of the pairwise alignments by turning them into graph structures, where nodes represent genes and edges synteny.
 
 analyse-trees.r : the result of lots of different attempts to decluster orthologous gene groups produced by orthoMCL, where it was clear that some groups contained too many paralogs, it includes functions for rearranging and cutting trees according to various criteria, labelling and plotting them to make it visually clear what the declustering process is doing, and reporting statistics on each tree and subtree.
+
+gwas.r : using mutual information, calculate the best phenotype-genotype (or snp or allele) hits from the experimental data
