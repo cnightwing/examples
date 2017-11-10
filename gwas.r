@@ -254,7 +254,7 @@ MIResults <- do.call("rbind",MIResults)
 MIResults <- cbind(MIResults,sapply(MIResults[,4],function(x) oggInfo(x)[4]))
 }
 
-#Produce some graphs to show how useless this whole exercise was
+#Produce some graphs to show how indeterminate the results are
 library(Hmisc)
 pdf("~/paper-phenotypes/gwas.pdf")
 plot(as.vector(apply(PhenoGeneMI,2,max)),as.vector(apply(PhenoSnpMI,2,max)),xlab="OGG Mutual Information",ylab="Snp Mutual Information",pch=20,col=rgb(1,0,0,0.2),xlim=c(0,1),ylim=c(0,1))
